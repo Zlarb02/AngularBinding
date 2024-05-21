@@ -1,0 +1,18 @@
+<main>
+    <div class="card-container">
+        <div class="img-container">
+            <img [src]="user.photo" class="card-img" alt="reagular" />
+        </div>
+        <section>
+            <h2>Prénom:{{user.firstName}}</h2>
+            <h2>Nom:{{user.name}}</h2>
+            <h2 [hidden]="isHidden">Age:{{user.age}}</h2>
+            <blockquote>{{user.quote}}</blockquote>
+            <input type="text" [(ngModel)]="user.quote">
+        </section>
+        <div class="button-container">
+            <button (click)="hide()" class="card-button">Afficher/Masquer mon âge</button>
+
+        </div>
+    </div>
+</main>
